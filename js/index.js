@@ -23,6 +23,12 @@
     new WOW().init();
 
 
+    
+    $('#appointmentForm').submit(function(eventObj) {
+        $(this).append(`<input type="hidden" name="message" value="${$("#message1").val()}" /> <input type="hidden" name="_subject" value="(IMPORTANT) NEW QUERY - VANI FINANCE">`);
+        return true;
+    });
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
